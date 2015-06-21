@@ -44,6 +44,8 @@
     <sprite>sprites\doorclos</sprite>
     <sprite>sprites\dooropen</sprite>
     <sprite>sprites\door2</sprite>
+    <sprite>sprites\door2open</sprite>
+    <sprite>sprites\door2closed</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
