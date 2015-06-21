@@ -35,6 +35,7 @@
     <sprite>sprites\floor1</sprite>
     <sprite>sprites\cube2</sprite>
     <sprite>sprites\cube1</sprite>
+    <sprite>sprites\floor2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
