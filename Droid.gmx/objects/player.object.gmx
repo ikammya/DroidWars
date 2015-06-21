@@ -4,7 +4,7 @@
   <solid>-1</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>stayleftdown</maskName>
   <events>
@@ -37,6 +37,26 @@ image_speed = 0.3;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>721</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_health</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>100</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -59,7 +79,7 @@ image_speed = 0.3;
 lad=Joystick.lad
 
 lad=GetDirection(lad)
-step=5;
+step=7;
 sq=step/sqrt(2);
 dx=0;
 dy=0;
@@ -151,6 +171,10 @@ if (place_free(x1+dx,y1+dy)){
     }
     }
 }
+if(y&lt;317){if (room != room_last)
+  {
+    room_goto_next();
+  }}
 depth=-bbox_bottom;
 </string>
           </argument>
@@ -158,30 +182,6 @@ depth=-bbox_bottom;
       </action>
     </event>
     <event eventtype="4" ename="object7">
-      <action>
-        <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
-        <codestring></codestring>
-        <whoName>object7</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
       <action>
         <libid>1</libid>
         <id>721</id>
@@ -243,43 +243,6 @@ depth=-bbox_bottom;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="object1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*w=sprite_width/2+1;
-h=sprite_height/2+1;
-
-if !(place_free(x-w,y-h)&amp;&amp;place_free(x,y-h)&amp;&amp;place_free(x+w,y-h)){
-    if (vspeed&lt;0){vspeed=0;}
-}
-if !(place_free(x,y+h)&amp;&amp;place_free(x,y+h)&amp;&amp;place_free(x+w,y+h)){
-    if (vspeed&gt;0){vspeed=0;}
-}
-if !(place_free(x-w,y-h)&amp;&amp;place_free(x-w,y)&amp;&amp;place_free(x-w,y+h)){
-    if (hspeed&lt;0){hspeed=0;}
-}
-if !(place_free(x+w,y-h)&amp;&amp;place_free(x+w,y)&amp;&amp;place_free(x+w,y+h)){
-    if (hspeed&gt;0){hspeed=0;}
-}*/
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="7" enumb="9">
       <action>
         <libid>1</libid>
@@ -294,28 +257,6 @@ if !(place_free(x+w,y-h)&amp;&amp;place_free(x+w,y)&amp;&amp;place_free(x+w,y+h)
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="7" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>721</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_health</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>100</string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="64">

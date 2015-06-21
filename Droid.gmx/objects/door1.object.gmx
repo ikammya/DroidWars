@@ -51,11 +51,12 @@ image_speed=0.1;
           <argument>
             <kind>1</kind>
             <string>d1=sqrt((player.x-x)*(player.x-x)+(player.y-y)*(player.y-y))
-if ((doorstate==true)&amp;&amp;(d1&lt;400)){
+dtarget=150;
+if ((doorstate==true)&amp;&amp;(d1&lt;dtarget)){
     doorstate=false;
     sprite_index=door2open;
 } else {
-    if ((doorstate==false)&amp;&amp;(d1&gt;=400)){
+    if ((doorstate==false)&amp;&amp;(d1&gt;=dtarget)){
         doorstate=true;
         sprite_index=door2closed;
     }

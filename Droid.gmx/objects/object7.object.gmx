@@ -4,7 +4,7 @@
   <solid>-1</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -32,17 +32,18 @@ sty=ystart;
 d=1000;
 dx=0;
 dy=0;
+step=4;
 
 delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
 delta3=sqrt((stx-plx)*(stx-plx)+(sty-ply)*(sty-ply));
 if (delta3&lt;d){
-    dx=5*(plx-x)/delta1;
-    dy=5*(ply-y)/delta1;
+    dx=step*(plx-x)/delta1;
+    dy=step*(ply-y)/delta1;
 }else{
     if (delta2&gt;10){
-        dx=5*(stx-x)/delta2;
-        dy=5*(sty-y)/delta2;
+        dx=step*(stx-x)/delta2;
+        dy=step*(sty-y)/delta2;
     }
 }
 

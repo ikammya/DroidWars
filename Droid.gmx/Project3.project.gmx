@@ -67,7 +67,9 @@
     <object>objects\door1</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Menu</room>
     <room>rooms\SampleRoom</room>
+    <room>rooms\room3</room>
   </rooms>
   <constants number="8">
     <constant name="d_Left">1</constant>
