@@ -51,6 +51,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\GetDirection.gml</script>
+    <script>scripts\trace.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\TestButton</object>

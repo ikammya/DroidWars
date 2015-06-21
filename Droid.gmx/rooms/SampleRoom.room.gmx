@@ -114,7 +114,7 @@
     <instance objName="obj_floor" x="7888" y="3792" name="inst_92BD2335" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object1" x="7752" y="3871" name="inst_5F2CDB4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="8296" y="2923" name="inst_7BBEBB1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door1" x="8296" y="2844" name="inst_78FA53FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="door1" x="8296" y="2923" name="inst_78FA53FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
