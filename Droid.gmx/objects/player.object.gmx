@@ -59,7 +59,8 @@ image_speed = 0.3;
 lad=Joystick.lad
 
 lad=GetDirection(lad)
-sq=10/sqrt(2);
+step=5;
+sq=step/sqrt(2);
 dx=0;
 dy=0;
 
@@ -106,19 +107,19 @@ switch lad
         }
     case d_Up:
          {
-          if y -10 &gt; 0 {dy=-10};sprite_index=walkup;oldlad=lad;break;
+          if y -step &gt; 0 {dy=-step};sprite_index=walkup;oldlad=lad;break;
          }
     case d_Down:
          {
-          if y +10 &lt; room_height {dy=10};sprite_index=walkdown;oldlad=lad;break;     
+          if y +step &lt; room_height {dy=step};sprite_index=walkdown;oldlad=lad;break;     
          }
     case d_Left:
          {
-          if x -10 &gt; 0 {dx=-10};sprite_index=walkleft;oldlad=lad;break;        
+          if x -step &gt; 0 {dx=-step};sprite_index=walkleft;oldlad=lad;break;        
          }
     case d_Right:
          {
-          if x +10 &lt; room_width {dx=10};sprite_index=walkright;oldlad=lad;break;        
+          if x +step &lt; room_width {dx=step};sprite_index=walkright;oldlad=lad;break;        
          }
     case d_UpLeft:
          {

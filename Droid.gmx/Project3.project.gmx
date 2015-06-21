@@ -61,6 +61,7 @@
     <object>objects\load</object>
     <object>objects\save</object>
     <object>objects\obj_floor</object>
+    <object>objects\door1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\SampleRoom</room>
