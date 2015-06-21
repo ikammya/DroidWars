@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>45</bbox_left>
-  <bbox_right>112</bbox_right>
-  <bbox_top>3</bbox_top>
-  <bbox_bottom>133</bbox_bottom>
+  <bbox_left>50</bbox_left>
+  <bbox_right>107</bbox_right>
+  <bbox_top>6</bbox_top>
+  <bbox_bottom>140</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
