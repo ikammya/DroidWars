@@ -36,6 +36,13 @@
     <sprite>sprites\cube2</sprite>
     <sprite>sprites\cube1</sprite>
     <sprite>sprites\floor2</sprite>
+    <sprite>sprites\cube3</sprite>
+    <sprite>sprites\cube4</sprite>
+    <sprite>sprites\cube5</sprite>
+    <sprite>sprites\cube6</sprite>
+    <sprite>sprites\dooranimation</sprite>
+    <sprite>sprites\doorclos</sprite>
+    <sprite>sprites\dooropen</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
