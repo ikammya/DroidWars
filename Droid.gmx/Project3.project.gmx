@@ -48,8 +48,20 @@
     <sprite>sprites\door2closed</sprite>
     <sprite>sprites\door3closed</sprite>
     <sprite>sprites\door3open</sprite>
+    <sprites name="Menu">
+      <sprite>sprites\resume</sprite>
+      <sprite>sprites\resume2</sprite>
+      <sprite>sprites\newgame</sprite>
+      <sprite>sprites\newgame2</sprite>
+      <sprite>sprites\about</sprite>
+      <sprite>sprites\about2</sprite>
+      <sprite>sprites\mexit</sprite>
+      <sprite>sprites\mexit2</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\menuback</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\GetDirection.gml</script>
@@ -67,11 +79,19 @@
     <object>objects\save</object>
     <object>objects\obj_floor</object>
     <object>objects\door1</object>
+    <object>objects\object12</object>
+    <objects name="Menu">
+      <object>objects\menuresume</object>
+      <object>objects\menunewgame</object>
+      <object>objects\menuabout</object>
+      <object>objects\menuexit</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu</room>
     <room>rooms\SampleRoom</room>
     <room>rooms\room3</room>
+    <room>rooms\menureal</room>
   </rooms>
   <constants number="8">
     <constant name="d_Left">1</constant>
