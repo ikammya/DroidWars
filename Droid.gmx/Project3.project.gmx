@@ -58,6 +58,8 @@
       <sprite>sprites\mexit</sprite>
       <sprite>sprites\mexit2</sprite>
     </sprites>
+    <sprite>sprites\sprite49</sprite>
+    <sprite>sprites\sprite50</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
@@ -77,6 +79,8 @@
     <object>objects\gui_button_restart</object>
     <object>objects\load</object>
     <object>objects\save</object>
+    <object>objects\hide</object>
+    <object>objects\mainm</object>
     <object>objects\obj_floor</object>
     <object>objects\door1</object>
     <object>objects\object12</object>
@@ -86,12 +90,16 @@
       <object>objects\menuabout</object>
       <object>objects\menuexit</object>
     </objects>
+    <object>objects\Plus</object>
+    <object>objects\introobj</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Menu</room>
+    <room>rooms\menureal</room>
+    <room>rooms\introroom</room>
     <room>rooms\SampleRoom</room>
     <room>rooms\room3</room>
-    <room>rooms\menureal</room>
+    <room>rooms\room4</room>
+    <room>rooms\Menu</room>
   </rooms>
   <constants number="8">
     <constant name="d_Left">1</constant>

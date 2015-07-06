@@ -80,7 +80,7 @@ hover = xhover &amp;&amp; yhover;
           <argument>
             <kind>1</kind>
             <string>if(hover){
-    game_restart();
+    room_restart();
 }
 </string>
           </argument>

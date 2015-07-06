@@ -37,7 +37,7 @@ step=4;
 delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
 delta3=sqrt((stx-plx)*(stx-plx)+(sty-ply)*(sty-ply));
-if (delta3&lt;d){
+if ((delta3&lt;d)&amp;&amp;(global.hidden==false)){
     dx=step*(plx-x)/delta1;
     dy=step*(ply-y)/delta1;
 }else{

@@ -32,6 +32,7 @@ instance_create(0,0,Joystick)
 
 lad=-1
 oldlad=-1;
+global.hidden=false;
 image_speed = 0.3;
 </string>
           </argument>
