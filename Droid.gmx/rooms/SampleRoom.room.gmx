@@ -382,8 +382,8 @@
     <instance objName="object1" x="2584" y="395" name="inst_06341A23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object1" x="2448" y="474" name="inst_6081F885" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object1" x="2312" y="553" name="inst_58E572B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door1" x="1768" y="553" name="inst_58BF2720" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door1" x="680" y="1027" name="inst_3686A73C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="doo2" x="1768" y="553" name="inst_58BF2720" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="doo2" x="680" y="1027" name="inst_3686A73C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="player" x="408" y="1106" name="inst_5B0EEE1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object7" x="2176" y="1185" name="inst_A9232F27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="object7" x="680" y="553" name="inst_AB64C176" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

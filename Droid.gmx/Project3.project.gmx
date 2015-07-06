@@ -82,7 +82,8 @@
     <object>objects\hide</object>
     <object>objects\mainm</object>
     <object>objects\obj_floor</object>
-    <object>objects\door1</object>
+    <object>objects\doo2</object>
+    <object>objects\door3</object>
     <object>objects\object12</object>
     <objects name="Menu">
       <object>objects\menuresume</object>
