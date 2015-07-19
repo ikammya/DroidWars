@@ -116,7 +116,7 @@
     <object>objects\TestButton</object>
     <object>objects\object1</object>
     <object>objects\player</object>
-    <object>objects\object7</object>
+    <object>objects\jawa</object>
     <object>objects\Joystick</object>
     <object>objects\display_gui</object>
     <object>objects\gui_button_restart</object>

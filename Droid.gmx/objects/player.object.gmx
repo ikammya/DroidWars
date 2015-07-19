@@ -182,7 +182,7 @@ depth=-bbox_bottom;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="object7">
+    <event eventtype="4" ename="jawa">
       <action>
         <libid>1</libid>
         <id>721</id>

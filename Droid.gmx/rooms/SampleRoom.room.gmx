@@ -385,9 +385,9 @@
     <instance objName="doo2" x="1768" y="553" name="inst_58BF2720" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="doo2" x="680" y="1027" name="inst_3686A73C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="player" x="408" y="1106" name="inst_5B0EEE1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object7" x="2176" y="1185" name="inst_A9232F27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object7" x="680" y="553" name="inst_AB64C176" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="object7" x="1088" y="395" name="inst_BECE6E58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="jawa" x="2176" y="1185" name="inst_A9232F27" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="jawa" x="680" y="553" name="inst_AB64C176" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="jawa" x="1088" y="395" name="inst_BECE6E58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="136" y="1659" name="inst_2EFAD05A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="408" y="1659" name="inst_0ADC1371" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="680" y="1659" name="inst_4C6B1651" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
