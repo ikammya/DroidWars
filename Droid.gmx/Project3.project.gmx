@@ -57,9 +57,52 @@
       <sprite>sprites\about2</sprite>
       <sprite>sprites\mexit</sprite>
       <sprite>sprites\mexit2</sprite>
+      <sprite>sprites\backgr1</sprite>
+      <sprite>sprites\backgr2</sprite>
+      <sprite>sprites\backgr3</sprite>
+      <sprite>sprites\backgr4</sprite>
+    </sprites>
+    <sprites name="Pause">
+      <sprite>sprites\pause</sprite>
+      <sprite>sprites\pause2</sprite>
+      <sprite>sprites\gresume</sprite>
+      <sprite>sprites\pausebackgr</sprite>
+      <sprite>sprites\exitpause</sprite>
+      <sprite>sprites\exitpause2</sprite>
+      <sprite>sprites\menupause</sprite>
+      <sprite>sprites\menupause2</sprite>
+      <sprite>sprites\savepause</sprite>
+      <sprite>sprites\savepause2</sprite>
+      <sprite>sprites\loadpause</sprite>
+      <sprite>sprites\loadpause2</sprite>
+      <sprite>sprites\gresume2</sprite>
     </sprites>
     <sprite>sprites\sprite49</sprite>
     <sprite>sprites\sprite50</sprite>
+    <sprites name="Java">
+      <sprite>sprites\javasup</sprite>
+      <sprite>sprites\javasdown</sprite>
+      <sprite>sprites\javasleft</sprite>
+      <sprite>sprites\javasright</sprite>
+      <sprite>sprites\javasleftup</sprite>
+      <sprite>sprites\javasleftdown</sprite>
+      <sprite>sprites\javasrightup</sprite>
+      <sprite>sprites\javarightdown</sprite>
+      <sprite>sprites\sjavasup</sprite>
+      <sprite>sprites\sjavasdown</sprite>
+      <sprite>sprites\sjavasleft</sprite>
+      <sprite>sprites\sjavaright</sprite>
+      <sprite>sprites\sjavasleftup</sprite>
+      <sprite>sprites\sjavasleftdown</sprite>
+      <sprite>sprites\sjavasrightup</sprite>
+      <sprite>sprites\sjavasrightdown</sprite>
+    </sprites>
+    <sprites name="HP">
+      <sprite>sprites\hpsprite</sprite>
+      <sprite>sprites\hpsprite2</sprite>
+      <sprite>sprites\hpsprite3</sprite>
+      <sprite>sprites\hpsprite4</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
