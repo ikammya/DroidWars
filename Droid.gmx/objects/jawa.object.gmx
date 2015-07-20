@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>oldlad=d_Down;
+readyaftershot=true;
 </string>
           </argument>
         </arguments>
@@ -53,6 +54,7 @@ ply=player.y;
 stx=xstart;
 sty=ystart;
 d=1000;
+dshoot=400;
 dx=0;
 dy=0;
 step=4;
@@ -60,13 +62,26 @@ step=4;
 delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
 delta3=sqrt((stx-plx)*(stx-plx)+(sty-ply)*(sty-ply));
-if ((delta3&lt;d)&amp;&amp;(global.hidden==false)){
-    dx=step*(plx-x)/delta1;
-    dy=step*(ply-y)/delta1;
-}else{
-    if (delta2&gt;10){
-        dx=step*(stx-x)/delta2;
-        dy=step*(sty-y)/delta2;
+
+if(alarm[0]=-1){readyaftershot=true;}
+
+if(readyaftershot){
+    if((delta1&lt;dshoot)&amp;&amp;(global.hidden==false)){
+        //shoot
+        instance_create(x,y-15,blaster);
+        alarm[0]= 20 * room_speed;
+        readyaftershoot=false;
+
+    }else{
+        if ((delta3&lt;d)&amp;&amp;(global.hidden==false)){
+            dx=step*(plx-x)/delta1;
+            dy=step*(ply-y)/delta1;
+        }else{
+            if (delta2&gt;10){
+                dx=step*(stx-x)/delta2;
+                dy=step*(sty-y)/delta2;
+            }
+        }
     }
 }
 

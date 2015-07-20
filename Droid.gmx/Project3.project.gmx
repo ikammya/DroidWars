@@ -116,16 +116,13 @@
   </scripts>
   <objects name="objects">
     <object>objects\TestButton</object>
-    <object>objects\object1</object>
+    <object>objects\wall1</object>
     <object>objects\player</object>
     <object>objects\jawa</object>
     <object>objects\Joystick</object>
     <object>objects\display_gui</object>
     <object>objects\gui_button_restart</object>
-    <object>objects\load</object>
-    <object>objects\save</object>
     <object>objects\hide</object>
-    <object>objects\mainm</object>
     <object>objects\obj_floor</object>
     <object>objects\doo2</object>
     <object>objects\door3</object>
