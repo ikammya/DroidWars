@@ -107,6 +107,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
+    <background>background\pausebackground</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -137,6 +138,11 @@
     </objects>
     <object>objects\Plus</object>
     <object>objects\introobj</object>
+    <object>objects\blaster</object>
+    <object>objects\pausebutton</object>
+    <object>objects\pausesave</object>
+    <object>objects\pauseload</object>
+    <object>objects\pausemenu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menureal</room>
