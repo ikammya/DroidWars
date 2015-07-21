@@ -104,6 +104,9 @@
       <sprite>sprites\hpsprite4</sprite>
     </sprites>
     <sprite>sprites\fireblaster</sprite>
+    <sprite>sprites\terminalspr</sprite>
+    <sprite>sprites\hide1</sprite>
+    <sprite>sprites\hide1p</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>

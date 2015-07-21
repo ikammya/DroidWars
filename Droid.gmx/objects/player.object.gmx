@@ -317,7 +317,7 @@ switch player.lives
             var sprite = hpsprite4;break;
         }
 }
-draw_sprite(sprite, 0, view_xview[view_current]+10, view_yview[view_current]+10));
+draw_sprite(sprite, 0, view_xview[view_current]+10, view_yview[view_current]+10);
 </string>
           </argument>
         </arguments>
