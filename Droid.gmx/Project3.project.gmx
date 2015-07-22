@@ -146,11 +146,13 @@
     <object>objects\introobj</object>
     <object>objects\blaster</object>
     <object>objects\pausebutton</object>
-    <object>objects\pausesave</object>
+    <object>objects\savebutton</object>
+    <object>objects\hidebutton</object>
     <object>objects\pauseload</object>
     <object>objects\pauserestart</object>
     <object>objects\pausemenu</object>
     <object>objects\terminal</object>
+    <object>objects\hideobj</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menureal</room>

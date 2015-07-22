@@ -56,7 +56,7 @@ radius = 300;
 dist = sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 
 if (dist&lt;radius){
-    instance_create(x, y-200, pausesave);
+    instance_create(x, y-200, savebutton);
 }
 </string>
           </argument>
