@@ -142,7 +142,9 @@
     <object>objects\pausebutton</object>
     <object>objects\pausesave</object>
     <object>objects\pauseload</object>
+    <object>objects\pauserestart</object>
     <object>objects\pausemenu</object>
+    <object>objects\terminal</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menureal</room>
