@@ -76,6 +76,10 @@
       <sprite>sprites\loadpause</sprite>
       <sprite>sprites\loadpause2</sprite>
       <sprite>sprites\gresume2</sprite>
+      <sprite>sprites\mmenup</sprite>
+      <sprite>sprites\mmenup2</sprite>
+      <sprite>sprites\restartsprt</sprite>
+      <sprite>sprites\restartsprt2</sprite>
     </sprites>
     <sprite>sprites\sprite49</sprite>
     <sprite>sprites\sprite50</sprite>
@@ -107,6 +111,8 @@
     <sprite>sprites\terminalspr</sprite>
     <sprite>sprites\hide1</sprite>
     <sprite>sprites\hide1p</sprite>
+    <sprite>sprites\hidebut</sprite>
+    <sprite>sprites\hidebut2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
