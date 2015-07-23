@@ -113,6 +113,13 @@
     <sprite>sprites\hide1p</sprite>
     <sprite>sprites\hidebut</sprite>
     <sprite>sprites\hidebut2</sprite>
+    <sprites name="Droid">
+      <sprite>sprites\astr1</sprite>
+      <sprite>sprites\astr2</sprite>
+      <sprite>sprites\astr3</sprite>
+      <sprite>sprites\astr4</sprite>
+      <sprite>sprites\astr5</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
