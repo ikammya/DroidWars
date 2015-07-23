@@ -49,8 +49,12 @@ readyaftershot=true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>plx=player.x;
-ply=player.y;
+            <string>plx=-1500;
+ply=-1500;
+if(instance_exists(player)){
+    plx=player.x;
+    ply=player.y;
+}
 stx=xstart;
 sty=ystart;
 d=1000;
@@ -59,18 +63,22 @@ dx=0;
 dy=0;
 step=4;
 
+trace(alarm[0]);
+trace(readyaftershot);
+
 delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
 delta3=sqrt((stx-plx)*(stx-plx)+(sty-ply)*(sty-ply));
 
-if(alarm[0]=-1){readyaftershot=true;}
+if(alarm[0]==-1){readyaftershot=true;}
 
 if(readyaftershot){
     if((delta1&lt;dshoot)&amp;&amp;(global.hidden==false)){
         //shoot
         instance_create(x,y-15,blaster);
-        alarm[0]= 20 * room_speed;
-        readyaftershoot=false;
+        readyaftershot=false;
+        trace(readyaftershot);
+        alarm[0]= 2 * room_speed;
 
     }else{
         if ((delta3&lt;d)&amp;&amp;(global.hidden==false)){

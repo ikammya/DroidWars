@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var act;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -106,7 +129,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_save("save0.sav");
+            <string>if(!global.hidden){
+    global.hidden=true;
+    player.visible=false;
+    Joystick.visible=false;
+    Joystick.active=false;
+    with(act){
+        sprite_index = hide1p;
+    }
+}else{
+    global.hidden=false;
+    player.visible=true;
+    Joystick.visible=true;
+    Joystick.active=true;
+    with(act){
+        sprite_index = hide1;
+    }
+}
 sprite_index=hidebut;
 </string>
           </argument>
