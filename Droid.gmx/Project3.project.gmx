@@ -82,7 +82,6 @@
       <sprite>sprites\restartsprt2</sprite>
     </sprites>
     <sprite>sprites\sprite49</sprite>
-    <sprite>sprites\sprite50</sprite>
     <sprites name="Java">
       <sprite>sprites\javasup</sprite>
       <sprite>sprites\javasdown</sprite>
@@ -150,7 +149,6 @@
       <object>objects\menuexit</object>
     </objects>
     <object>objects\Plus</object>
-    <object>objects\introobj</object>
     <object>objects\blaster</object>
     <object>objects\pausebutton</object>
     <object>objects\savebutton</object>
@@ -160,10 +158,16 @@
     <object>objects\pausemenu</object>
     <object>objects\terminal</object>
     <object>objects\hideobj</object>
+    <objects name="Droids">
+      <object>objects\astro1</object>
+      <object>objects\astro2</object>
+      <object>objects\astro3</object>
+      <object>objects\astro4</object>
+      <object>objects\astro5</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\menureal</room>
-    <room>rooms\introroom</room>
     <room>rooms\SampleRoom</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
