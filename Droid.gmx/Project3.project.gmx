@@ -119,6 +119,9 @@
       <sprite>sprites\astr4</sprite>
       <sprite>sprites\astr5</sprite>
     </sprites>
+    <sprite>sprites\endgameclosed</sprite>
+    <sprite>sprites\endgameopen</sprite>
+    <sprite>sprites\endgameanimat</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
