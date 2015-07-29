@@ -100,7 +100,7 @@ image_speed = 0.3;
 lad=Joystick.lad
 
 lad=GetDirection(lad)
-step=7;
+step=6;
 sq=step/sqrt(2);
 dx=0;
 dy=0;
@@ -192,10 +192,6 @@ if (place_free(x1+dx,y1+dy)){
     }
     }
 }
-if(y&lt;317){if (room != room_last)
-  {
-    room_goto_next();
-  }}
 depth=-bbox_bottom;
 </string>
           </argument>

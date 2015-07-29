@@ -143,6 +143,7 @@
     <object>objects\hide</object>
     <object>objects\obj_floor</object>
     <object>objects\doo2</object>
+    <object>objects\endgameobj</object>
     <object>objects\door3</object>
     <object>objects\object12</object>
     <objects name="Menu">
@@ -155,6 +156,7 @@
     <object>objects\blaster</object>
     <object>objects\pausebutton</object>
     <object>objects\savebutton</object>
+    <object>objects\openbutton</object>
     <object>objects\hidebutton</object>
     <object>objects\pauseload</object>
     <object>objects\pauserestart</object>

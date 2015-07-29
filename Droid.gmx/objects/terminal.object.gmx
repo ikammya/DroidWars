@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>depth=-y;
 image_speed=0.3;
+radius = 150;
 </string>
           </argument>
         </arguments>
@@ -52,11 +53,11 @@ image_speed=0.3;
             <string>plx = player.x;
 ply = player.y;
 
-radius = 300;
 dist = sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 
-if (dist&lt;radius){
+if ((dist&lt;radius)&amp;&amp;(!instance_exists(savebutton))){
     instance_create(x, y-200, savebutton);
+    instance_create(x, y-300, openbutton);
 }
 </string>
           </argument>
