@@ -122,6 +122,10 @@
     <sprite>sprites\endgameclosed</sprite>
     <sprite>sprites\endgameopen</sprite>
     <sprite>sprites\endgameanimat</sprite>
+    <sprite>sprites\opensprt</sprite>
+    <sprite>sprites\opensprt2</sprite>
+    <sprite>sprites\closesprt</sprite>
+    <sprite>sprites\closesprt2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
