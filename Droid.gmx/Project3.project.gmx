@@ -43,7 +43,6 @@
     <sprite>sprites\dooranimation</sprite>
     <sprite>sprites\doorclos</sprite>
     <sprite>sprites\dooropen</sprite>
-    <sprite>sprites\endgameanimat</sprite>
     <sprite>sprites\endgameopen</sprite>
     <sprite>sprites\endgameclosed</sprite>
     <sprite>sprites\door3closed</sprite>
@@ -121,14 +120,12 @@
     </sprites>
     <sprite>sprites\door2closed</sprite>
     <sprite>sprites\door2open</sprite>
-    <sprite>sprites\door2</sprite>
+    <sprite>sprites\door2animat</sprite>
     <sprite>sprites\opensprt</sprite>
     <sprite>sprites\opensprt2</sprite>
     <sprite>sprites\closesprt</sprite>
     <sprite>sprites\closesprt2</sprite>
-    <sprite>sprites\exitgameclosed</sprite>
-    <sprite>sprites\exitgameopen</sprite>
-    <sprite>sprites\exitgameanim</sprite>
+    <sprite>sprites\endgameanim</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
