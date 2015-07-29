@@ -43,9 +43,9 @@
     <sprite>sprites\dooranimation</sprite>
     <sprite>sprites\doorclos</sprite>
     <sprite>sprites\dooropen</sprite>
-    <sprite>sprites\door2</sprite>
-    <sprite>sprites\door2open</sprite>
-    <sprite>sprites\door2closed</sprite>
+    <sprite>sprites\endgameanimat</sprite>
+    <sprite>sprites\endgameopen</sprite>
+    <sprite>sprites\endgameclosed</sprite>
     <sprite>sprites\door3closed</sprite>
     <sprite>sprites\door3open</sprite>
     <sprites name="Menu">
@@ -119,9 +119,9 @@
       <sprite>sprites\astr4</sprite>
       <sprite>sprites\astr5</sprite>
     </sprites>
-    <sprite>sprites\endgameclosed</sprite>
-    <sprite>sprites\endgameopen</sprite>
-    <sprite>sprites\endgameanimat</sprite>
+    <sprite>sprites\door2closed</sprite>
+    <sprite>sprites\door2open</sprite>
+    <sprite>sprites\door2</sprite>
     <sprite>sprites\opensprt</sprite>
     <sprite>sprites\opensprt2</sprite>
     <sprite>sprites\closesprt</sprite>
