@@ -126,6 +126,9 @@
     <sprite>sprites\opensprt2</sprite>
     <sprite>sprites\closesprt</sprite>
     <sprite>sprites\closesprt2</sprite>
+    <sprite>sprites\exitgameclosed</sprite>
+    <sprite>sprites\exitgameopen</sprite>
+    <sprite>sprites\exitgameanim</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
