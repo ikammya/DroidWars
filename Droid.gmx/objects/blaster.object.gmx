@@ -59,7 +59,7 @@ speedv = spd*(ply-y)/dist;
             <string>x+=speedh;
 y+=speedv;
 
-if(place_meeting(x,y,player)){player.lives-=1;}
+if(place_meeting(x,y,player)){player.lives-=1;instance_destroy();}
 
 if(place_meeting(x,y,wall1)){instance_destroy();}
 </string>

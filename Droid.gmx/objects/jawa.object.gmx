@@ -63,21 +63,21 @@ dx=0;
 dy=0;
 step=4;
 
-trace(alarm[0]);
-trace(readyaftershot);
+trace(0,alarm[0]);
+trace(1,readyaftershot);
 
 delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
 delta3=sqrt((stx-plx)*(stx-plx)+(sty-ply)*(sty-ply));
 
-if(alarm[0]==-1){readyaftershot=true;}
+if(alarm[0]==0){readyaftershot=true;}
 
 if(readyaftershot){
     if((delta1&lt;dshoot)&amp;&amp;(global.hidden==false)){
         //shoot
         instance_create(x,y-15,blaster);
         readyaftershot=false;
-        trace(readyaftershot);
+        trace(1,readyaftershot);
         alarm[0]= 2 * room_speed;
 
     }else{
