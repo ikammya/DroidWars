@@ -126,6 +126,15 @@
     <sprite>sprites\endgameclosed</sprite>
     <sprite>sprites\endgameopen</sprite>
     <sprite>sprites\endgameanim</sprite>
+    <sprite>sprites\doorredclosed</sprite>
+    <sprite>sprites\doorgreenclosed</sprite>
+    <sprite>sprites\doorgoldclosed</sprite>
+    <sprite>sprites\terminalred</sprite>
+    <sprite>sprites\terminalgreen</sprite>
+    <sprite>sprites\terminalgold</sprite>
+    <sprite>sprites\doorredopen</sprite>
+    <sprite>sprites\doorgreenopen</sprite>
+    <sprite>sprites\doorgoldopen</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
