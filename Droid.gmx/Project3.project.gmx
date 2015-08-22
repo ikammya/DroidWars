@@ -6,11 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\SampleButton</sprite>
-    <sprite>sprites\wallsprite</sprite>
-    <sprite>sprites\sprite2</sprite>
-    <sprite>sprites\sprite4</sprite>
-    <sprite>sprites\sprite3</sprite>
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\Joybase</sprite>
     <sprite>sprites\JoyJoy</sprite>
@@ -32,20 +27,22 @@
       <sprite>sprites\stayrightup</sprite>
       <sprite>sprites\stayrightdown</sprite>
     </sprites>
-    <sprite>sprites\floor1</sprite>
-    <sprite>sprites\cube2</sprite>
-    <sprite>sprites\cube1</sprite>
-    <sprite>sprites\floor2</sprite>
-    <sprite>sprites\cube3</sprite>
-    <sprite>sprites\cube4</sprite>
-    <sprite>sprites\cube5</sprite>
-    <sprite>sprites\cube6</sprite>
+    <sprites name="Floors">
+      <sprite>sprites\floor1</sprite>
+      <sprite>sprites\floor2</sprite>
+    </sprites>
+    <sprites name="Cubes">
+      <sprite>sprites\cube2</sprite>
+      <sprite>sprites\cube3</sprite>
+      <sprite>sprites\cube4</sprite>
+      <sprite>sprites\cube5</sprite>
+      <sprite>sprites\cube6</sprite>
+      <sprite>sprites\cube1</sprite>
+    </sprites>
     <sprite>sprites\dooranimation</sprite>
     <sprite>sprites\doorclos</sprite>
     <sprite>sprites\dooropen</sprite>
     <sprite>sprites\door2animat</sprite>
-    <sprite>sprites\door2open</sprite>
-    <sprite>sprites\door2closed</sprite>
     <sprite>sprites\door3closed</sprite>
     <sprite>sprites\door3open</sprite>
     <sprites name="Menu">
@@ -107,11 +104,16 @@
       <sprite>sprites\hpsprite4</sprite>
     </sprites>
     <sprite>sprites\fireblaster</sprite>
-    <sprite>sprites\terminalspr</sprite>
     <sprite>sprites\hide1</sprite>
     <sprite>sprites\hide1p</sprite>
-    <sprite>sprites\hidebut</sprite>
-    <sprite>sprites\hidebut2</sprite>
+    <sprites name="GameButtons">
+      <sprite>sprites\hidebut</sprite>
+      <sprite>sprites\hidebut2</sprite>
+      <sprite>sprites\opensprt</sprite>
+      <sprite>sprites\opensprt2</sprite>
+      <sprite>sprites\closesprt</sprite>
+      <sprite>sprites\closesprt2</sprite>
+    </sprites>
     <sprites name="Droid">
       <sprite>sprites\astr1</sprite>
       <sprite>sprites\astr2</sprite>
@@ -119,22 +121,25 @@
       <sprite>sprites\astr4</sprite>
       <sprite>sprites\astr5</sprite>
     </sprites>
-    <sprite>sprites\opensprt</sprite>
-    <sprite>sprites\opensprt2</sprite>
-    <sprite>sprites\closesprt</sprite>
-    <sprite>sprites\closesprt2</sprite>
-    <sprite>sprites\endgameclosed</sprite>
-    <sprite>sprites\endgameopen</sprite>
     <sprite>sprites\endgameanim</sprite>
-    <sprite>sprites\doorredclosed</sprite>
-    <sprite>sprites\doorgreenclosed</sprite>
-    <sprite>sprites\doorgoldclosed</sprite>
-    <sprite>sprites\terminalred</sprite>
-    <sprite>sprites\terminalgreen</sprite>
-    <sprite>sprites\terminalgold</sprite>
-    <sprite>sprites\doorredopen</sprite>
-    <sprite>sprites\doorgreenopen</sprite>
-    <sprite>sprites\doorgoldopen</sprite>
+    <sprites name="Doors">
+      <sprite>sprites\doorgreenclosed</sprite>
+      <sprite>sprites\doorredclosed</sprite>
+      <sprite>sprites\doorgoldclosed</sprite>
+      <sprite>sprites\doorredopen</sprite>
+      <sprite>sprites\doorgoldopen</sprite>
+      <sprite>sprites\doorgreenopen</sprite>
+      <sprite>sprites\endgameopen</sprite>
+      <sprite>sprites\endgameclosed</sprite>
+      <sprite>sprites\door2open</sprite>
+      <sprite>sprites\door2closed</sprite>
+    </sprites>
+    <sprites name="Terminals">
+      <sprite>sprites\terminalred</sprite>
+      <sprite>sprites\terminalgold</sprite>
+      <sprite>sprites\terminalspr</sprite>
+      <sprite>sprites\terminalgreen</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
@@ -146,19 +151,19 @@
     <script>scripts\trace.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\TestButton</object>
     <object>objects\wall1</object>
     <object>objects\player</object>
     <object>objects\jawa</object>
     <object>objects\Joystick</object>
     <object>objects\display_gui</object>
-    <object>objects\gui_button_restart</object>
     <object>objects\hide</object>
     <object>objects\obj_floor</object>
     <object>objects\doo2</object>
     <object>objects\endgameobj</object>
+    <object>objects\door_r</object>
+    <object>objects\door_g</object>
+    <object>objects\door_l</object>
     <object>objects\door3</object>
-    <object>objects\object12</object>
     <objects name="Menu">
       <object>objects\menuresume</object>
       <object>objects\menunewgame</object>
@@ -170,11 +175,17 @@
     <object>objects\pausebutton</object>
     <object>objects\savebutton</object>
     <object>objects\openbutton</object>
+    <object>objects\openbutton_r</object>
+    <object>objects\openbutton_g</object>
+    <object>objects\openbutton_l</object>
     <object>objects\hidebutton</object>
     <object>objects\pauseload</object>
     <object>objects\pauserestart</object>
     <object>objects\pausemenu</object>
     <object>objects\terminal</object>
+    <object>objects\terminal_r</object>
+    <object>objects\terminal_g</object>
+    <object>objects\terminal_l</object>
     <object>objects\hideobj</object>
     <objects name="Droids">
       <object>objects\astro1</object>
@@ -184,6 +195,7 @@
       <object>objects\astro5</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom</room>
