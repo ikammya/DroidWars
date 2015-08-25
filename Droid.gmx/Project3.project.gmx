@@ -96,6 +96,14 @@
       <sprite>sprites\sjavasleftdown</sprite>
       <sprite>sprites\sjavasrightup</sprite>
       <sprite>sprites\sjavasrightdown</sprite>
+      <sprite>sprites\javaupshoot</sprite>
+      <sprite>sprites\javadownshoot</sprite>
+      <sprite>sprites\javaleftshoot</sprite>
+      <sprite>sprites\javarightshoot</sprite>
+      <sprite>sprites\javarightupshoot</sprite>
+      <sprite>sprites\javaleftupshoot</sprite>
+      <sprite>sprites\javarightdownshoot</sprite>
+      <sprite>sprites\javaleftdownshoot</sprite>
     </sprites>
     <sprites name="HP">
       <sprite>sprites\hpsprite</sprite>
@@ -139,6 +147,28 @@
       <sprite>sprites\terminalgold</sprite>
       <sprite>sprites\terminalspr</sprite>
       <sprite>sprites\terminalgreen</sprite>
+    </sprites>
+    <sprites name="r2d2">
+      <sprite>sprites\r2ups</sprite>
+      <sprite>sprites\r2downs</sprite>
+      <sprite>sprites\r2rights</sprite>
+      <sprite>sprites\r2lefts</sprite>
+      <sprite>sprites\r2rightups</sprite>
+      <sprite>sprites\r2leftups</sprite>
+      <sprite>sprites\r2rightdowns</sprite>
+      <sprite>sprites\r2leftdowns</sprite>
+      <sprite>sprites\r2up</sprite>
+      <sprite>sprites\r2down</sprite>
+      <sprite>sprites\r2left</sprite>
+      <sprite>sprites\r2right</sprite>
+      <sprite>sprites\r2rightup</sprite>
+      <sprite>sprites\r2rleftup</sprite>
+      <sprite>sprites\r2rightdown</sprite>
+      <sprite>sprites\r2leftdown</sprite>
+    </sprites>
+    <sprites name="flash">
+      <sprite>sprites\flash</sprite>
+      <sprite>sprites\trapflash</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -195,7 +225,6 @@
       <object>objects\astro5</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom</room>
