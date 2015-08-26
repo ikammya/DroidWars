@@ -162,7 +162,7 @@
       <sprite>sprites\r2left</sprite>
       <sprite>sprites\r2right</sprite>
       <sprite>sprites\r2rightup</sprite>
-      <sprite>sprites\r2rleftup</sprite>
+      <sprite>sprites\r2leftup</sprite>
       <sprite>sprites\r2rightdown</sprite>
       <sprite>sprites\r2leftdown</sprite>
     </sprites>
@@ -183,6 +183,7 @@
   <objects name="objects">
     <object>objects\wall1</object>
     <object>objects\player</object>
+    <object>objects\r2d2</object>
     <object>objects\jawa</object>
     <object>objects\Joystick</object>
     <object>objects\display_gui</object>
@@ -216,6 +217,8 @@
     <object>objects\terminal_r</object>
     <object>objects\terminal_g</object>
     <object>objects\terminal_l</object>
+    <object>objects\molnia</object>
+    <object>objects\molnia_r2</object>
     <object>objects\hideobj</object>
     <objects name="Droids">
       <object>objects\astro1</object>
@@ -225,6 +228,7 @@
       <object>objects\astro5</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom</room>

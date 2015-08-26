@@ -542,6 +542,7 @@
     <instance objName="terminal" x="952" y="553" name="inst_5556B4A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="terminal_g" x="272" y="948" name="inst_EE077E1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_g" x="680" y="1027" name="inst_CD3F6810" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="r2d2" x="544" y="1106" name="inst_9AB047E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -86,9 +86,6 @@ dx=0;
 dy=0;
 step=4;
 
-trace(0,alarm[0]);
-trace(1,readyaftershot);
-
 delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
 delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
 delta3=sqrt((stx-plx)*(stx-plx)+(sty-ply)*(sty-ply));
@@ -98,7 +95,6 @@ if(readyaftershot){
         //shoot
         instance_create(x,y-15,blaster);
         readyaftershot=false;
-        trace(1,readyaftershot);
         alarm[0]= 2 * room_speed;
 
     }else{
