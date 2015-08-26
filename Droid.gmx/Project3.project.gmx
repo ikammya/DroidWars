@@ -110,6 +110,10 @@
       <sprite>sprites\hpsprite2</sprite>
       <sprite>sprites\hpsprite3</sprite>
       <sprite>sprites\hpsprite4</sprite>
+      <sprite>sprites\hpspriter21</sprite>
+      <sprite>sprites\hpspriter22</sprite>
+      <sprite>sprites\hpspriter23</sprite>
+      <sprite>sprites\hpspriter24</sprite>
     </sprites>
     <sprite>sprites\fireblaster</sprite>
     <sprite>sprites\hide1</sprite>
@@ -228,7 +232,6 @@
       <object>objects\astro5</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom</room>
