@@ -191,7 +191,6 @@
     <object>objects\jawa</object>
     <object>objects\Joystick</object>
     <object>objects\display_gui</object>
-    <object>objects\hide</object>
     <object>objects\obj_floor</object>
     <object>objects\doo2</object>
     <object>objects\endgameobj</object>
@@ -208,6 +207,8 @@
     <object>objects\Plus</object>
     <object>objects\blaster</object>
     <object>objects\pausebutton</object>
+    <object>objects\hp3po</object>
+    <object>objects\hpr2</object>
     <object>objects\savebutton</object>
     <object>objects\openbutton</object>
     <object>objects\openbutton_r</object>
@@ -232,9 +233,11 @@
       <object>objects\astro5</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom</room>
+    <room>rooms\SampleRoom2</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
     <room>rooms\Menu</room>

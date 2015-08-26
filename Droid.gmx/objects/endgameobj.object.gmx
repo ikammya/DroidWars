@@ -66,10 +66,21 @@ if(instance_exists(player)){
     plx=player.x;
     ply=player.y;
 }
-d1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y))
+
+rx = plx;
+ry = ply;
+
+if (instance_exists(r2d2)){
+    rx = r2d2.x;
+    ry = r2d2.y;
+}
+
+
+dist = min(sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y)),sqrt((rx-x)*(rx-x)+(ry-y)*(ry-y)));
+
 dtarget=70;
 
-if((global.endgameready==true)&amp;&amp;(d1&lt;dtarget)){
+if((global.endgameready==true)&amp;&amp;(dist&lt;dtarget)){
     if (room != room_last)
       {
         room_goto_next();

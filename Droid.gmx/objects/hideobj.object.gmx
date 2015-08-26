@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>depth=-y;
 image_speed=0.3;
+radius=130;
 </string>
           </argument>
         </arguments>
@@ -52,9 +53,16 @@ image_speed=0.3;
             <string>plx = player.x;
 ply = player.y;
 
-radius = 120;
-dist = sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
+rx = player.x;
+ry = player.y;
 
+if (instance_exists(r2d2)){
+    rx = r2d2.x;
+    ry = r2d2.y;
+}
+
+
+dist = min(sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y)),sqrt((rx-x)*(rx-x)+(ry-y)*(ry-y)));
 if ((dist&lt;radius)&amp;&amp;(!instance_exists(hidebutton))){
     instance_create(x, y-200, hidebutton);
     hidebutton.act=id;

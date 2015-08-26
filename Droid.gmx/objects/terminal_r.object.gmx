@@ -53,8 +53,16 @@ radius = 150;
             <string>plx = player.x;
 ply = player.y;
 
-dist = sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
+rx = player.x;
+ry = player.y;
 
+if (instance_exists(r2d2)){
+    rx = r2d2.x;
+    ry = r2d2.y;
+}
+
+
+dist = min(sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y)),sqrt((rx-x)*(rx-x)+(ry-y)*(ry-y)));
 if ((dist&lt;radius)&amp;&amp;(!instance_exists(openbutton_r))){
     instance_create(x, y-200, openbutton_r);
 }

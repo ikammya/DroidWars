@@ -3,7 +3,7 @@
   <spriteName>r2ups</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>r2ups</maskName>
@@ -30,12 +30,16 @@
 instance_create(0,0,Joystick)
 }
 
+instance_create(0,0,hpr2);
+
 lad=-1
 oldlad=-1;
 global.hidden=false;
 image_speed = 0.3;
 justhit=false;
 r2d2.armor=4;
+active=false;
+if (!instance_exists(player)){active=true;}
 </string>
           </argument>
         </arguments>
@@ -58,7 +62,9 @@ r2d2.armor=4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>lad=-1
+            <string>if (armor==0){game_restart();}
+
+lad=-1
 lad=Joystick.lad
 
 lad=GetDirection(lad)
@@ -67,13 +73,101 @@ sq=step/sqrt(2);
 dx=0;
 dy=0;
 
-if (armor==0){game_restart();}
-
-switch lad
-{
-    case -1:
-        {
-            switch oldlad
+if (active){
+    switch lad
+    {
+        case -1:
+            {
+                switch oldlad
+                {
+                    case d_Up:
+                         {
+                          sprite_index=r2ups;break;
+                         }
+                    case d_Down:
+                         {
+                          sprite_index=r2downs;break;     
+                         }
+                    case d_Left:
+                         {
+                          sprite_index=r2lefts;break;        
+                         }
+                    case d_Right:
+                         {
+                          sprite_index=r2rights;break;        
+                         }
+                    case d_UpLeft:
+                         {
+                          sprite_index=r2leftups;break;
+                         }
+                    case d_UpRight:
+                         {
+                          sprite_index=r2rightups;break;
+                         }
+                    case d_DownRight:
+                         {
+                          sprite_index=r2rightdowns;break;
+                         }
+                    case d_DownLeft:
+                         {
+                          sprite_index=r2leftdowns;break;
+                         }
+                }
+            break;
+            }
+        case d_Up:
+             {
+              if y -step &gt; 0 {dy=-step};sprite_index=r2up;oldlad=lad;break;
+             }
+        case d_Down:
+             {
+              if y +step &lt; room_height {dy=step};sprite_index=r2down;oldlad=lad;break;     
+             }
+        case d_Left:
+             {
+              if x -step &gt; 0 {dx=-step};sprite_index=r2left;oldlad=lad;break;        
+             }
+        case d_Right:
+             {
+              if x +step &lt; room_width {dx=step};sprite_index=r2right;oldlad=lad;break;        
+             }
+        case d_UpLeft:
+             {
+              if y -sq &gt; 0&amp;&amp; x-sq&gt;0 {dy =-sq;dx=-sq};sprite_index=r2leftup;oldlad=lad;break;
+             }
+        case d_UpRight:
+             {
+              if y -sq &gt; 0&amp;&amp; x+sq&lt;room_width {dy=-sq;dx=sq};sprite_index=r2rightup;oldlad=lad;break;
+             }
+        case d_DownRight:
+             {
+              if y+sq&lt;room_height&amp;&amp; x+sq&lt;room_width {dy=sq;dx=sq};sprite_index=r2rightdown;oldlad=lad;break;
+             }
+        case d_DownLeft:
+             {
+              if y+sq&lt;room_height&amp;&amp;  x-sq&gt;0 {dy=sq;dx=-sq};sprite_index=r2leftdown;oldlad=lad;break;
+             }
+    }
+}else{
+    plx=xstart;
+    ply=ystart;
+    if(instance_exists(player)){
+        plx=player.x;
+        ply=player.y;
+    }
+    delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
+    if(delta1&gt;130){
+        dx=step*(plx-x)/delta1;
+        dy=step*(ply-y)/delta1;
+    } 
+    if(delta1&lt;100){
+        dx=-step*(plx-x)/delta1;
+        dy=-step*(ply-y)/delta1;
+    }
+    
+    
+    if((dx==0)&amp;&amp;(dy==0)){
+    switch oldlad
             {
                 case d_Up:
                      {
@@ -108,41 +202,65 @@ switch lad
                       sprite_index=r2leftdowns;break;
                      }
             }
-        break;
-        }
-    case d_Up:
-         {
-          if y -step &gt; 0 {dy=-step};sprite_index=r2up;oldlad=lad;break;
-         }
-    case d_Down:
-         {
-          if y +step &lt; room_height {dy=step};sprite_index=r2down;oldlad=lad;break;     
-         }
-    case d_Left:
-         {
-          if x -step &gt; 0 {dx=-step};sprite_index=r2left;oldlad=lad;break;        
-         }
-    case d_Right:
-         {
-          if x +step &lt; room_width {dx=step};sprite_index=r2right;oldlad=lad;break;        
-         }
-    case d_UpLeft:
-         {
-          if y -sq &gt; 0&amp;&amp; x-sq&gt;0 {dy =-sq;dx=-sq};sprite_index=r2leftup;oldlad=lad;break;
-         }
-    case d_UpRight:
-         {
-          if y -sq &gt; 0&amp;&amp; x+sq&lt;room_width {dy=-sq;dx=sq};sprite_index=r2rightup;oldlad=lad;break;
-         }
-    case d_DownRight:
-         {
-          if y+sq&lt;room_height&amp;&amp; x+sq&lt;room_width {dy=sq;dx=sq};sprite_index=r2rightdown;oldlad=lad;break;
-         }
-    case d_DownLeft:
-         {
-          if y+sq&lt;room_height&amp;&amp;  x-sq&gt;0 {dy=sq;dx=-sq};sprite_index=r2leftdown;oldlad=lad;break;
-         }
+} else {
+    var sinus=dy/step;
+    var cosinus=dx/step;
+    if(cosinus&gt;0.924){oldlad=d_Right;};
+    if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&lt;0)){oldlad=d_UpRight;};
+    if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&gt;0)){oldlad=d_DownRight;};
+    if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&lt;0)){oldlad=d_Up;};
+    if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&gt;0)){oldlad=d_Down;};
+    if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&lt;0)){oldlad=d_UpLeft;};
+    if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&gt;0)){oldlad=d_DownLeft;};
+    if(cosinus&lt;=-0.924){oldlad=d_Left;};
+    switch oldlad
+            {
+                case d_Up:
+                     {
+                      sprite_index=r2up;break;
+                     }
+                case d_Down:
+                     {
+                      sprite_index=r2down;break;     
+                     }
+                case d_Left:
+                     {
+                      sprite_index=r2left;break;        
+                     }
+                case d_Right:
+                     {
+                      sprite_index=r2right;break;        
+                     }
+                case d_UpLeft:
+                     {
+                      sprite_index=r2leftup;break;
+                     }
+                case d_UpRight:
+                     {
+                      sprite_index=r2rightup;break;
+                     }
+                case d_DownRight:
+                     {
+                      sprite_index=r2rightdown;break;
+                     }
+                case d_DownLeft:
+                     {
+                      sprite_index=r2leftdown;break;
+                     }
+            }
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
 if (!justhit){
     x1=(bbox_right+bbox_left)/2;
     y1=(bbox_top+bbox_bottom)/2;
@@ -159,49 +277,6 @@ if (!justhit){
     }
 }
 depth=-bbox_bottom;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>var sprite1 = hpsprite;
-switch r2d2.armor
-{
-    case 4:
-        {
-            break;
-        }
-    case 3:
-        {
-            var sprite1 = hpsprite2;break;
-        }
-    case 2:
-        {
-            var sprite1 = hpsprite3;break;
-        }
-    case 1:
-        {
-            var sprite1 = hpsprite4;break;
-        }
-}
-draw_sprite(sprite1, 0, view_xview[view_current]+10, view_yview[view_current]+300);
 </string>
           </argument>
         </arguments>
