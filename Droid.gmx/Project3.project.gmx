@@ -233,7 +233,6 @@
       <object>objects\astro5</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom</room>
