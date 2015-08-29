@@ -180,6 +180,7 @@
     <sprite>sprites\healerrightdown</sprite>
     <sprite>sprites\dead</sprite>
     <sprite>sprites\healerbasespr</sprite>
+    <sprite>sprites\sprite148</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\menuback</background>
@@ -230,6 +231,7 @@
     <object>objects\terminal_l</object>
     <object>objects\molnia</object>
     <object>objects\molnia_r2</object>
+    <object>objects\healerarm</object>
     <object>objects\healerbase</object>
     <object>objects\hideobj</object>
     <objects name="Droids">
