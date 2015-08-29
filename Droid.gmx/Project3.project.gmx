@@ -181,8 +181,10 @@
     <sprite>sprites\dead</sprite>
     <sprite>sprites\healerbasespr</sprite>
     <sprite>sprites\sprite148</sprite>
+    <sprite>sprites\deadsmall</sprite>
   </sprites>
   <backgrounds name="background">
+    <background>background\deadback</background>
     <background>background\menuback</background>
     <background>background\pausebackground</background>
   </backgrounds>
@@ -233,6 +235,7 @@
     <object>objects\molnia_r2</object>
     <object>objects\healerarm</object>
     <object>objects\healerbase</object>
+    <object>objects\deadobj</object>
     <object>objects\hideobj</object>
     <objects name="Droids">
       <object>objects\astro1</object>
@@ -245,8 +248,8 @@
   <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
-    <room>rooms\SampleRoom</room>
     <room>rooms\SampleRoom2</room>
+    <room>rooms\SampleRoom</room>
     <room>rooms\room3</room>
     <room>rooms\room4</room>
     <room>rooms\Menu</room>
