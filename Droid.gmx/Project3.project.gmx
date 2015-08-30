@@ -174,12 +174,18 @@
       <sprite>sprites\flash</sprite>
       <sprite>sprites\trapflash</sprite>
     </sprites>
-    <sprite>sprites\healerleftup</sprite>
-    <sprite>sprites\healerrightup</sprite>
-    <sprite>sprites\healerleftdown</sprite>
-    <sprite>sprites\healerrightdown</sprite>
+    <sprites name="Healer">
+      <sprite>sprites\healerleftup</sprite>
+      <sprite>sprites\healerdown</sprite>
+      <sprite>sprites\healerrightup</sprite>
+      <sprite>sprites\healerright</sprite>
+      <sprite>sprites\healerleftdown</sprite>
+      <sprite>sprites\healerbasespr</sprite>
+      <sprite>sprites\healerrightdown</sprite>
+      <sprite>sprites\healerleft</sprite>
+      <sprite>sprites\healerup</sprite>
+    </sprites>
     <sprite>sprites\dead</sprite>
-    <sprite>sprites\healerbasespr</sprite>
     <sprite>sprites\sprite148</sprite>
     <sprite>sprites\deadsmall</sprite>
   </sprites>
@@ -245,7 +251,6 @@
       <object>objects\astro5</object>
     </objects>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom2</room>
