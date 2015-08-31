@@ -186,7 +186,6 @@
       <sprite>sprites\healerup</sprite>
     </sprites>
     <sprite>sprites\dead</sprite>
-    <sprite>sprites\sprite148</sprite>
     <sprite>sprites\deadsmall</sprite>
   </sprites>
   <backgrounds name="background">
