@@ -96,11 +96,15 @@ if ((dist&lt;radius)&amp;&amp;(!justhealed)){
         r2d2.armor+=1;
         justhealed=true;
         alarm[0]=3*room_speed;
+        instance_create(r2d2.x,r2d2.y,iskraobj);
+        r2d2.step=0;
     }
     if((!healr2)&amp;&amp;(player.armor&lt;4)){
         player.armor+=1;
         justhealed=true;
         alarm[0]=3*room_speed;
+        instance_create(player.x,player.y,iskraobj);
+        player.step=0;
     }
 }
 

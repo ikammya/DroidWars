@@ -83,25 +83,29 @@
     <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
-        <id>109</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_to</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>0</kind>
-            <string>view_xview[0]+70</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>view_yview[0]+210</string>
+            <kind>1</kind>
+            <string>if (r2d2.active==true){
+    x=view_xview[0]+70;
+    y=view_yview[0]+70;
+}else{
+    x=view_xview[0]+70;
+    y=view_yview[0]+210;
+}
+
+</string>
           </argument>
         </arguments>
       </action>

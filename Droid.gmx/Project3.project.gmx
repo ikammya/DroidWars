@@ -187,11 +187,15 @@
     </sprites>
     <sprite>sprites\dead</sprite>
     <sprite>sprites\deadsmall</sprite>
+    <sprite>sprites\iskra</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\deadback</background>
-    <background>background\menuback</background>
+    <background>background\menuback0</background>
     <background>background\pausebackground</background>
+    <background>background\menuback1</background>
+    <background>background\menuback3</background>
+    <background>background\menuback2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -236,6 +240,7 @@
     <object>objects\terminal_r</object>
     <object>objects\terminal_g</object>
     <object>objects\terminal_l</object>
+    <object>objects\iskraobj</object>
     <object>objects\molnia</object>
     <object>objects\molnia_r2</object>
     <object>objects\healerarm</object>
@@ -249,6 +254,7 @@
       <object>objects\astro4</object>
       <object>objects\astro5</object>
     </objects>
+    <object>objects\menubackchanger</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menureal</room>

@@ -39,6 +39,8 @@ image_speed = 0.3;
 justhit=false;
 player.armor=4;
 active=true;
+stepinit=6;
+step=stepinit;
 </string>
           </argument>
         </arguments>
@@ -70,11 +72,10 @@ active=true;
     instance_create(view_xview[view_current]+view_wview[view_current]/2, view_yview[view_current]+view_hview[view_current]/2+sprite_get_height(loadpause)/2+100,pausemenu);
 } else {
 
-lad=-1
-lad=Joystick.lad
+lad=-1;
+lad=Joystick.lad;
 
-lad=GetDirection(lad)
-step=6;
+lad=GetDirection(lad);
 sq=step/sqrt(2);
 dx=0;
 dy=0;
