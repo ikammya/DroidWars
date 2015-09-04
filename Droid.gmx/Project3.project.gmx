@@ -116,8 +116,19 @@
       <sprite>sprites\hpspriter24</sprite>
     </sprites>
     <sprite>sprites\fireblaster</sprite>
-    <sprite>sprites\hide1</sprite>
-    <sprite>sprites\hide1p</sprite>
+    <sprites name="Hide">
+      <sprites name="Droid">
+        <sprite>sprites\astr1</sprite>
+        <sprite>sprites\astr2</sprite>
+        <sprite>sprites\astr3</sprite>
+        <sprite>sprites\astr4</sprite>
+        <sprite>sprites\astr5</sprite>
+      </sprites>
+      <sprite>sprites\hide1</sprite>
+      <sprite>sprites\hide1p</sprite>
+      <sprite>sprites\hide2</sprite>
+      <sprite>sprites\hide2p</sprite>
+    </sprites>
     <sprites name="GameButtons">
       <sprite>sprites\hidebut</sprite>
       <sprite>sprites\hidebut2</sprite>
@@ -125,13 +136,6 @@
       <sprite>sprites\opensprt2</sprite>
       <sprite>sprites\closesprt</sprite>
       <sprite>sprites\closesprt2</sprite>
-    </sprites>
-    <sprites name="Droid">
-      <sprite>sprites\astr1</sprite>
-      <sprite>sprites\astr2</sprite>
-      <sprite>sprites\astr3</sprite>
-      <sprite>sprites\astr4</sprite>
-      <sprite>sprites\astr5</sprite>
     </sprites>
     <sprite>sprites\endgameanim</sprite>
     <sprites name="Doors">
