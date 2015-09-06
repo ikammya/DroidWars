@@ -31,6 +31,57 @@
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x1=x-137;
+x2=x+137;
+y1=y-236;
+y2=y;
+
+intersection=false;
+
+if (instance_exists(player)){
+    if (point_in_rectangle(player.x,player.y,x1,y1,x2,y2)){
+        intersection=true;
+    }
+}
+if (instance_exists(r2d2)){
+    if (point_in_rectangle(r2d2.x,r2d2.y,x1,y1,x2,y2)){
+        intersection=true;
+    }
+}
+if (instance_exists(jawa)){
+    jawan=instance_nearest(x,y,jawa);
+    if (point_in_rectangle(jawan.x,jawan.y,x1,y1,x2,y2)){
+        intersection=true;
+    }
+}
+
+if (intersection){
+    image_alpha=0.5;
+} else {
+    image_alpha=1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

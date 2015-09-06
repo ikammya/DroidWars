@@ -96,14 +96,82 @@ if ((dist&lt;radius)&amp;&amp;(!justhealed)){
         r2d2.armor+=1;
         justhealed=true;
         alarm[0]=3*room_speed;
-        instance_create(r2d2.x,r2d2.y,iskraobj);
+        switch oldlad
+            {
+                case d_Up:
+                     {
+                         instance_create(x,y-152,iskraobj); break;
+                     }
+                case d_Down:
+                     {
+                         instance_create(x,y+45,iskraobj); break;     
+                     }
+                case d_Left:
+                     {
+                         instance_create(x-163,y-53,iskraobj); break;        
+                     }
+                case d_Right:
+                     {
+                         instance_create(x+165,y-53,iskraobj); break;        
+                     }
+                case d_UpLeft:
+                     {
+                         instance_create(x-119,y-120,iskraobj); break;
+                     }
+                case d_UpRight:
+                     {
+                         instance_create(x+119,y-120,iskraobj); break;
+                     }
+                case d_DownRight:
+                     {
+                         instance_create(x+119,y+16,iskraobj); break;
+                     }
+                case d_DownLeft:
+                     {
+                         instance_create(x-119,y+16,iskraobj); break;
+                     }
+            }
         r2d2.step=0;
     }
     if((!healr2)&amp;&amp;(player.armor&lt;4)){
         player.armor+=1;
         justhealed=true;
         alarm[0]=3*room_speed;
-        instance_create(player.x,player.y,iskraobj);
+        switch oldlad
+            {
+                case d_Up:
+                     {
+                         instance_create(x,y-152,iskraobj); break;
+                     }
+                case d_Down:
+                     {
+                         instance_create(x,y+45,iskraobj); break;     
+                     }
+                case d_Left:
+                     {
+                         instance_create(x-163,y-53,iskraobj); break;        
+                     }
+                case d_Right:
+                     {
+                         instance_create(x+165,y-53,iskraobj); break;        
+                     }
+                case d_UpLeft:
+                     {
+                         instance_create(x-119,y-120,iskraobj); break;
+                     }
+                case d_UpRight:
+                     {
+                         instance_create(x+119,y-120,iskraobj); break;
+                     }
+                case d_DownRight:
+                     {
+                         instance_create(x+119,y+16,iskraobj); break;
+                     }
+                case d_DownLeft:
+                     {
+                         instance_create(x-119,y+16,iskraobj); break;
+                     }
+            }
         player.step=0;
     }
 }
