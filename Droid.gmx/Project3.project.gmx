@@ -30,6 +30,8 @@
     <sprites name="Floors">
       <sprite>sprites\floor1</sprite>
       <sprite>sprites\floor2</sprite>
+      <sprite>sprites\floor3</sprite>
+      <sprite>sprites\floor4</sprite>
     </sprites>
     <sprites name="Cubes">
       <sprite>sprites\cube2</sprite>
@@ -38,6 +40,10 @@
       <sprite>sprites\cube5</sprite>
       <sprite>sprites\cube6</sprite>
       <sprite>sprites\cube1</sprite>
+      <sprite>sprites\cudepipe</sprite>
+      <sprite>sprites\cubepipe2</sprite>
+      <sprite>sprites\cubepipedec</sprite>
+      <sprite>sprites\cubepipevalve</sprite>
     </sprites>
     <sprite>sprites\dooranimation</sprite>
     <sprite>sprites\doorclos</sprite>
@@ -177,6 +183,9 @@
     <sprites name="flash">
       <sprite>sprites\flash</sprite>
       <sprite>sprites\trapflash</sprite>
+      <sprite>sprites\flashtem</sprite>
+      <sprite>sprites\flashtem2</sprite>
+      <sprite>sprites\flashfloor</sprite>
     </sprites>
     <sprites name="Healer">
       <sprite>sprites\healerleftup</sprite>
