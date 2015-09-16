@@ -201,6 +201,17 @@
     <sprite>sprites\dead</sprite>
     <sprite>sprites\deadsmall</sprite>
     <sprite>sprites\iskra</sprite>
+    <sprite>sprites\smoke</sprite>
+    <sprites name="flashr2d2">
+      <sprite>sprites\lr2d2up</sprite>
+      <sprite>sprites\lr2d2down</sprite>
+      <sprite>sprites\lr2d2right</sprite>
+      <sprite>sprites\lr2d2left</sprite>
+      <sprite>sprites\lr2d2rightup</sprite>
+      <sprite>sprites\lr2d2rightdown</sprite>
+      <sprite>sprites\lr2d2leftdown</sprite>
+      <sprite>sprites\lr2d2leftup</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\deadback</background>
