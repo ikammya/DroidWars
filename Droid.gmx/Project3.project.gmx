@@ -257,6 +257,7 @@
     <object>objects\openbutton_g</object>
     <object>objects\openbutton_l</object>
     <object>objects\hidebutton</object>
+    <object>objects\flashbutton</object>
     <object>objects\pauseload</object>
     <object>objects\pauserestart</object>
     <object>objects\pausemenu</object>
@@ -264,13 +265,16 @@
     <object>objects\terminal_r</object>
     <object>objects\terminal_g</object>
     <object>objects\terminal_l</object>
+    <object>objects\flashterminal1</object>
     <object>objects\iskraobj</object>
     <object>objects\molnia</object>
     <object>objects\molnia_r2</object>
+    <object>objects\flasher</object>
     <object>objects\healerarm</object>
     <object>objects\healerbase</object>
     <object>objects\deadobj</object>
     <object>objects\hideobj</object>
+    <object>objects\flash_floor</object>
     <objects name="Droids">
       <object>objects\astro1</object>
       <object>objects\astro2</object>
