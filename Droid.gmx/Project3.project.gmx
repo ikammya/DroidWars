@@ -134,6 +134,7 @@
       <sprite>sprites\hide1p</sprite>
       <sprite>sprites\hide2</sprite>
       <sprite>sprites\hide2p</sprite>
+      <sprite>sprites\hide3p</sprite>
     </sprites>
     <sprites name="GameButtons">
       <sprite>sprites\hidebut</sprite>
@@ -212,6 +213,10 @@
       <sprite>sprites\lr2d2leftdown</sprite>
       <sprite>sprites\lr2d2leftup</sprite>
     </sprites>
+    <sprite>sprites\onfl1</sprite>
+    <sprite>sprites\onfl2</sprite>
+    <sprite>sprites\offfl1</sprite>
+    <sprite>sprites\offfl2</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\deadback</background>
