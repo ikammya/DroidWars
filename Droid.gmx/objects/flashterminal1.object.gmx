@@ -28,6 +28,7 @@
             <string>depth=-y;
 image_speed=0.3;
 radius = 150;
+global.flashing=false;
 </string>
           </argument>
         </arguments>

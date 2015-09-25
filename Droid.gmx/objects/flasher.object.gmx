@@ -26,6 +26,30 @@
           <argument>
             <kind>1</kind>
             <string>depth = 999;
+justhitelectric=false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>justhitelectric=false;
 </string>
           </argument>
         </arguments>
@@ -51,11 +75,33 @@
             <string>if (!global.flashing){
     instance_destroy();
 }else{
-    var j = instance_nearest(x,y,jawa);
-    if (position_meeting(j.x,j.y,self)){
-        with(j) {
-            instance_destroy();
-        }   
+    if (!justhitelectric){
+        var j = instance_nearest(x,y,jawa);
+        var p = instance_nearest(x,y,player);
+        var r = instance_nearest(x,y,r2d2);
+        if (j!=noone){
+            if (position_meeting(j.x,j.y,self)){
+                with(j) {
+                    instance_destroy();
+                } 
+                alarm[0]=1.5*room_speed;
+                justhitelectric=true;
+            }
+        }
+        if (p!=noone){
+            if (position_meeting(p.x,p.y,self)){
+                player.armor-=1; player.justhit=true; instance_create(player.x, player.y, molnia);  
+                alarm[0]=1.5*room_speed;
+                justhitelectric=true;
+            }
+        }
+        if (r!=noone){
+            if (position_meeting(r.x,r.y,self)){
+                r2d2.armor-=1; r2d2.justhit=true; instance_create(r2d2.x, r2d2.y, molnia_r2);  
+                alarm[0]=1.5*room_speed;
+                justhitelectric=true;
+            }
+        }
     }
 }
 </string>
