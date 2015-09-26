@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>var act;
+var r2h = false;
+var ph = false;
 </string>
           </argument>
         </arguments>
@@ -131,15 +133,42 @@
             <kind>1</kind>
             <string>if(!global.hidden){
     global.hidden=true;
-    player.visible=false;
+    if (instance_exists(player)){
+        ph=true;
+        player.visible=false;
+    }
+    if (instance_exists(r2d2)){
+        r2h=true;
+        r2d2.visible=false;
+    }
     Joystick.visible=false;
     Joystick.active=false;
-    with(act){
-        sprite_index = hide1p;
+    
+    if((ph)&amp;&amp;(!r2h)){
+        with(act){
+            sprite_index = hide1p;
+        }
+    }
+    if((ph)&amp;&amp;(r2h)){
+        with(act){
+            sprite_index = hide3p;
+        }
+    }
+    if((!ph)&amp;&amp;(r2h)){
+        with(act){
+            sprite_index = hide2p;
+        }
     }
 }else{
     global.hidden=false;
-    player.visible=true;
+    if (ph){
+        ph=false;
+        player.visible=true;
+    }
+    if (r2h){
+        r2h=false;
+        r2d2.visible=true;
+    }
     Joystick.visible=true;
     Joystick.active=true;
     with(act){
