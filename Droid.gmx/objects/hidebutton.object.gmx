@@ -132,6 +132,8 @@ var ph = false;
           <argument>
             <kind>1</kind>
             <string>if(!global.hidden){
+    ph=false;
+    r2h=false;
     global.hidden=true;
     if (instance_exists(player)){
         ph=true;
