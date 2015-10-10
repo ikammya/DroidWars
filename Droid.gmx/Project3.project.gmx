@@ -213,10 +213,20 @@
       <sprite>sprites\lr2d2leftdown</sprite>
       <sprite>sprites\lr2d2leftup</sprite>
     </sprites>
-    <sprite>sprites\onfl1</sprite>
     <sprite>sprites\onfl2</sprite>
+    <sprite>sprites\onfl1</sprite>
     <sprite>sprites\offfl1</sprite>
     <sprite>sprites\offfl2</sprite>
+    <sprite>sprites\alone1</sprite>
+    <sprite>sprites\alone2</sprite>
+    <sprite>sprites\r2shocker1</sprite>
+    <sprite>sprites\r2shocker2</sprite>
+    <sprite>sprites\together1</sprite>
+    <sprite>sprites\together2</sprite>
+    <sprite>sprites\deadjawa1</sprite>
+    <sprite>sprites\deadjawa2</sprite>
+    <sprite>sprites\deadjawa3</sprite>
+    <sprite>sprites\deadjawa4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\deadback</background>
