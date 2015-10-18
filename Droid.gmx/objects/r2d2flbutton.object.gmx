@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>if (!instance_exists(r2d2)){
-    instance_destroy():
+    instance_destroy();
 } else {
     if (!r2d2.active){
-        instance_destroy():
+        instance_destroy();
     }
 }
 </string>

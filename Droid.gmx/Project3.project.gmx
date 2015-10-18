@@ -241,10 +241,7 @@
     <sprite>sprites\r2shocker2</sprite>
     <sprite>sprites\together1</sprite>
     <sprite>sprites\together2</sprite>
-    <sprite>sprites\deadjawa1</sprite>
-    <sprite>sprites\deadjawa2</sprite>
-    <sprite>sprites\deadjawa3</sprite>
-    <sprite>sprites\deadjawa4</sprite>
+    <sprite>sprites\par_sprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\deadback</background>
