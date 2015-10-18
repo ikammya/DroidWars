@@ -25,7 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch r2d2.armor 
+            <string>if(instance_exists(hp3po)&amp;&amp;!(instance_exists(singlebutton))){
+    instance_create(-1000,-1000,singlebutton);
+}
+
+switch r2d2.armor 
 {
     case 4:
     {

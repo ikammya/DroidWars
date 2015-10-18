@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch player.armor 
+            <string>if(instance_exists(hpr2)&amp;&amp;!(instance_exists(singlebutton))){
+    instance_create(-1000,-1000,singlebutton);
+}
+
+
+switch player.armor 
 {
     case 4:
     {

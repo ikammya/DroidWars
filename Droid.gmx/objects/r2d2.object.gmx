@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if !instance_exists(Joystick)
+            <string>global.single=false;
+
+if !instance_exists(Joystick)
 {
 instance_create(0,0,Joystick)
 }
@@ -82,6 +84,12 @@ dx=0;
 dy=0;
 
 if (r2d2.active){
+
+    if(!instance_exists(r2d2flbutton)){
+        instance_create(-1000,-1000, r2d2flbutton);    
+    }
+
+    if (!instance_exists(r2shocker)){
     switch lad
     {
         case -1:
@@ -156,112 +164,112 @@ if (r2d2.active){
               if y+sq&lt;room_height&amp;&amp;  x-sq&gt;0 {dy=sq;dx=-sq};sprite_index=r2leftdown;oldlad=lad;break;
              }
     }
+    }
 }else{
-    plx=xstart;
-    ply=ystart;
-    if(instance_exists(player)){
-        plx=player.x;
-        ply=player.y;
+    if (!global.single){
+        plx=xstart;
+        ply=ystart;
+        if(instance_exists(player)){
+            plx=player.x;
+            ply=player.y;
+        }
+        delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
+        if(delta1&gt;130){
+            dx=step*(plx-x)/delta1;
+            dy=step*(ply-y)/delta1;
+        } 
+        if(delta1&lt;100){
+            dx=-step*(plx-x)/delta1;
+            dy=-step*(ply-y)/delta1;
+        }
+        
+        
+        if((dx==0)&amp;&amp;(dy==0)){
+        switch oldlad
+                {
+                    case d_Up:
+                         {
+                          sprite_index=r2ups;break;
+                         }
+                    case d_Down:
+                         {
+                          sprite_index=r2downs;break;     
+                         }
+                    case d_Left:
+                         {
+                          sprite_index=r2lefts;break;        
+                         }
+                    case d_Right:
+                         {
+                          sprite_index=r2rights;break;        
+                         }
+                    case d_UpLeft:
+                         {
+                          sprite_index=r2leftups;break;
+                         }
+                    case d_UpRight:
+                         {
+                          sprite_index=r2rightups;break;
+                         }
+                    case d_DownRight:
+                         {
+                          sprite_index=r2rightdowns;break;
+                         }
+                    case d_DownLeft:
+                         {
+                          sprite_index=r2leftdowns;break;
+                         }
+                }
+    } else {
+        var sinus=dy/step;
+        var cosinus=dx/step;
+        if(cosinus&gt;0.924){oldlad=d_Right;};
+        if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&lt;0)){oldlad=d_UpRight;};
+        if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&gt;0)){oldlad=d_DownRight;};
+        if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&lt;0)){oldlad=d_Up;};
+        if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&gt;0)){oldlad=d_Down;};
+        if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&lt;0)){oldlad=d_UpLeft;};
+        if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&gt;0)){oldlad=d_DownLeft;};
+        if(cosinus&lt;=-0.924){oldlad=d_Left;};
+        switch oldlad
+                {
+                    case d_Up:
+                         {
+                          sprite_index=r2up;break;
+                         }
+                    case d_Down:
+                         {
+                          sprite_index=r2down;break;     
+                         }
+                    case d_Left:
+                         {
+                          sprite_index=r2left;break;        
+                         }
+                    case d_Right:
+                         {
+                          sprite_index=r2right;break;        
+                         }
+                    case d_UpLeft:
+                         {
+                          sprite_index=r2leftup;break;
+                         }
+                    case d_UpRight:
+                         {
+                          sprite_index=r2rightup;break;
+                         }
+                    case d_DownRight:
+                         {
+                          sprite_index=r2rightdown;break;
+                         }
+                    case d_DownLeft:
+                         {
+                          sprite_index=r2leftdown;break;
+                         }
+                }
     }
-    delta1=sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y));
-    if(delta1&gt;130){
-        dx=step*(plx-x)/delta1;
-        dy=step*(ply-y)/delta1;
-    } 
-    if(delta1&lt;100){
-        dx=-step*(plx-x)/delta1;
-        dy=-step*(ply-y)/delta1;
-    }
-    
-    
-    if((dx==0)&amp;&amp;(dy==0)){
-    switch oldlad
-            {
-                case d_Up:
-                     {
-                      sprite_index=r2ups;break;
-                     }
-                case d_Down:
-                     {
-                      sprite_index=r2downs;break;     
-                     }
-                case d_Left:
-                     {
-                      sprite_index=r2lefts;break;        
-                     }
-                case d_Right:
-                     {
-                      sprite_index=r2rights;break;        
-                     }
-                case d_UpLeft:
-                     {
-                      sprite_index=r2leftups;break;
-                     }
-                case d_UpRight:
-                     {
-                      sprite_index=r2rightups;break;
-                     }
-                case d_DownRight:
-                     {
-                      sprite_index=r2rightdowns;break;
-                     }
-                case d_DownLeft:
-                     {
-                      sprite_index=r2leftdowns;break;
-                     }
-            }
-} else {
-    var sinus=dy/step;
-    var cosinus=dx/step;
-    if(cosinus&gt;0.924){oldlad=d_Right;};
-    if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&lt;0)){oldlad=d_UpRight;};
-    if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&gt;0)){oldlad=d_DownRight;};
-    if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&lt;0)){oldlad=d_Up;};
-    if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&gt;0)){oldlad=d_Down;};
-    if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&lt;0)){oldlad=d_UpLeft;};
-    if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&gt;0)){oldlad=d_DownLeft;};
-    if(cosinus&lt;=-0.924){oldlad=d_Left;};
-    switch oldlad
-            {
-                case d_Up:
-                     {
-                      sprite_index=r2up;break;
-                     }
-                case d_Down:
-                     {
-                      sprite_index=r2down;break;     
-                     }
-                case d_Left:
-                     {
-                      sprite_index=r2left;break;        
-                     }
-                case d_Right:
-                     {
-                      sprite_index=r2right;break;        
-                     }
-                case d_UpLeft:
-                     {
-                      sprite_index=r2leftup;break;
-                     }
-                case d_UpRight:
-                     {
-                      sprite_index=r2rightup;break;
-                     }
-                case d_DownRight:
-                     {
-                      sprite_index=r2rightdown;break;
-                     }
-                case d_DownLeft:
-                     {
-                      sprite_index=r2leftdown;break;
-                     }
-            }
-}
-    
-    
-    
-    
-    
+     
+        
+}    
     
     
     

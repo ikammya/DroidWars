@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>oldlad=d_Down;
 readyaftershot=true;
+alive=true;
+deadbodyset=false;
 </string>
           </argument>
         </arguments>
@@ -72,201 +74,219 @@ readyaftershot=true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>plx=-1500;
-ply=-1500;
-if(instance_exists(player)){
-    plx=player.x;
-    ply=player.y;
-}
-rx=plx;
-ry=ply;
-if(instance_exists(r2d2)){
-    rx=r2d2.x;
-    ry=r2d2.y;
-}
-tx=0;ty=0;
-if(((plx-x)*(plx-x)+(ply-y)*(ply-y))&lt;=((rx-x)*(rx-x)+(ry-y)*(ry-y))){
-    tx=plx; ty=ply;
-}else{
-    tx=rx;ty=ry;
-}
-
-
-stx=xstart;
-sty=ystart;
-d=1000;
-dshoot=400;
-dx=0;
-dy=0;
-step=4;
-
-delta1=sqrt((tx-x)*(tx-x)+(ty-y)*(ty-y));
-delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
-delta3=sqrt((stx-tx)*(stx-tx)+(sty-ty)*(sty-ty));
-
-if(readyaftershot){
-    if((delta1&lt;dshoot)&amp;&amp;(global.hidden==false)){
-        //shoot
-        var sinus=(ty-y)/delta1;
-        var cosinus=(tx-x)/delta1;
+            <string>if (alive){
+    plx=-1500;
+    ply=-1500;
+    if(instance_exists(player)){
+        plx=player.x;
+        ply=player.y;
+    }
+    rx=plx;
+    ry=ply;
+    if(instance_exists(r2d2)){
+        rx=r2d2.x;
+        ry=r2d2.y;
+    }
+    tx=0;ty=0;
+    if(((plx-x)*(plx-x)+(ply-y)*(ply-y))&lt;=((rx-x)*(rx-x)+(ry-y)*(ry-y))){
+        tx=plx; ty=ply;
+    }else{
+        tx=rx;ty=ry;
+    }
+    
+    
+    stx=xstart;
+    sty=ystart;
+    d=1000;
+    dshoot=400;
+    dx=0;
+    dy=0;
+    step=4;
+    
+    delta1=sqrt((tx-x)*(tx-x)+(ty-y)*(ty-y));
+    delta2=sqrt((stx-x)*(stx-x)+(sty-y)*(sty-y));
+    delta3=sqrt((stx-tx)*(stx-tx)+(sty-ty)*(sty-ty));
+    
+    if(readyaftershot){
+        if((delta1&lt;dshoot)&amp;&amp;(global.hidden==false)){
+            //shoot
+            var sinus=(ty-y)/delta1;
+            var cosinus=(tx-x)/delta1;
+            if(cosinus&gt;0.924){oldlad=d_Right;};
+            if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(sinus&lt;0)){oldlad=d_UpRight;};
+            if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(sinus&gt;0)){oldlad=d_DownRight;};
+            if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(sinus&lt;0)){oldlad=d_Up;};
+            if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(sinus&gt;0)){oldlad=d_Down;};
+            if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(sinus&lt;0)){oldlad=d_UpLeft;};
+            if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(sinus&gt;0)){oldlad=d_DownLeft;};
+            if(cosinus&lt;=-0.924){oldlad=d_Left;};
+            switch oldlad
+                {
+                    case d_Up:
+                         {
+                          sprite_index=javaupshoot;instance_create(x,y-50,blaster);break;
+                         }
+                    case d_Down:
+                         {
+                          sprite_index=javadownshoot;instance_create(x,y+50,blaster);break;     
+                         }
+                    case d_Left:
+                         {
+                          sprite_index=javaleftshoot;instance_create(x-50,y,blaster);break;        
+                         }
+                    case d_Right:
+                         {
+                          sprite_index=javarightshoot;instance_create(x+50,y,blaster);break;        
+                         }
+                    case d_UpLeft:
+                         {
+                          sprite_index=javaleftupshoot;instance_create(x-50,y-50,blaster);break;
+                         }
+                    case d_UpRight:
+                         {
+                          sprite_index=javarightupshoot;instance_create(x+50,y-50,blaster);break;
+                         }
+                    case d_DownRight:
+                         {
+                          sprite_index=javarightdownshoot;instance_create(x+50,y+50,blaster);break;
+                         }
+                    case d_DownLeft:
+                         {
+                          sprite_index=javaleftdownshoot;instance_create(x-50,y+50,blaster);break;
+                         }
+                }
+            readyaftershot=false;
+            alarm[0]= 2 * room_speed;
+    
+        }else{
+            if ((delta3&lt;d)&amp;&amp;(global.hidden==false)){
+                dx=step*(tx-x)/delta1;
+                dy=step*(ty-y)/delta1;
+            }else{
+                if (delta2&gt;10){
+                    dx=step*(stx-x)/delta2;
+                    dy=step*(sty-y)/delta2;
+                }
+            }
+    
+    
+    if((dx==0)&amp;&amp;(dy==0)){
+        switch oldlad
+                {
+                    case d_Up:
+                         {
+                          sprite_index=sjavasup;break;
+                         }
+                    case d_Down:
+                         {
+                          sprite_index=sjavasdown;break;     
+                         }
+                    case d_Left:
+                         {
+                          sprite_index=sjavasleft;break;        
+                         }
+                    case d_Right:
+                         {
+                          sprite_index=sjavaright;break;        
+                         }
+                    case d_UpLeft:
+                         {
+                          sprite_index=sjavasleftup;break;
+                         }
+                    case d_UpRight:
+                         {
+                          sprite_index=sjavasrightup;break;
+                         }
+                    case d_DownRight:
+                         {
+                          sprite_index=sjavasrightdown;break;
+                         }
+                    case d_DownLeft:
+                         {
+                          sprite_index=sjavasleftdown;break;
+                         }
+                }
+    } else {
+        var sinus=dy/step;
+        var cosinus=dx/step;
         if(cosinus&gt;0.924){oldlad=d_Right;};
-        if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(sinus&lt;0)){oldlad=d_UpRight;};
-        if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(sinus&gt;0)){oldlad=d_DownRight;};
-        if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(sinus&lt;0)){oldlad=d_Up;};
-        if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(sinus&gt;0)){oldlad=d_Down;};
-        if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(sinus&lt;0)){oldlad=d_UpLeft;};
-        if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(sinus&gt;0)){oldlad=d_DownLeft;};
+        if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&lt;0)){oldlad=d_UpRight;};
+        if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&gt;0)){oldlad=d_DownRight;};
+        if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&lt;0)){oldlad=d_Up;};
+        if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&gt;0)){oldlad=d_Down;};
+        if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&lt;0)){oldlad=d_UpLeft;};
+        if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&gt;0)){oldlad=d_DownLeft;};
         if(cosinus&lt;=-0.924){oldlad=d_Left;};
         switch oldlad
-            {
-                case d_Up:
-                     {
-                      sprite_index=javaupshoot;instance_create(x,y-50,blaster);break;
-                     }
-                case d_Down:
-                     {
-                      sprite_index=javadownshoot;instance_create(x,y+50,blaster);break;     
-                     }
-                case d_Left:
-                     {
-                      sprite_index=javaleftshoot;instance_create(x-50,y,blaster);break;        
-                     }
-                case d_Right:
-                     {
-                      sprite_index=javarightshoot;instance_create(x+50,y,blaster);break;        
-                     }
-                case d_UpLeft:
-                     {
-                      sprite_index=javaleftupshoot;instance_create(x-50,y-50,blaster);break;
-                     }
-                case d_UpRight:
-                     {
-                      sprite_index=javarightupshoot;instance_create(x+50,y-50,blaster);break;
-                     }
-                case d_DownRight:
-                     {
-                      sprite_index=javarightdownshoot;instance_create(x+50,y+50,blaster);break;
-                     }
-                case d_DownLeft:
-                     {
-                      sprite_index=javaleftdownshoot;instance_create(x-50,y+50,blaster);break;
-                     }
-            }
-        readyaftershot=false;
-        alarm[0]= 2 * room_speed;
-
-    }else{
-        if ((delta3&lt;d)&amp;&amp;(global.hidden==false)){
-            dx=step*(tx-x)/delta1;
-            dy=step*(ty-y)/delta1;
-        }else{
-            if (delta2&gt;10){
-                dx=step*(stx-x)/delta2;
-                dy=step*(sty-y)/delta2;
-            }
-        }
-
-
-if((dx==0)&amp;&amp;(dy==0)){
-    switch oldlad
-            {
-                case d_Up:
-                     {
-                      sprite_index=sjavasup;break;
-                     }
-                case d_Down:
-                     {
-                      sprite_index=sjavasdown;break;     
-                     }
-                case d_Left:
-                     {
-                      sprite_index=sjavasleft;break;        
-                     }
-                case d_Right:
-                     {
-                      sprite_index=sjavaright;break;        
-                     }
-                case d_UpLeft:
-                     {
-                      sprite_index=sjavasleftup;break;
-                     }
-                case d_UpRight:
-                     {
-                      sprite_index=sjavasrightup;break;
-                     }
-                case d_DownRight:
-                     {
-                      sprite_index=sjavasrightdown;break;
-                     }
-                case d_DownLeft:
-                     {
-                      sprite_index=sjavasleftdown;break;
-                     }
-            }
-} else {
-    var sinus=dy/step;
-    var cosinus=dx/step;
-    if(cosinus&gt;0.924){oldlad=d_Right;};
-    if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&lt;0)){oldlad=d_UpRight;};
-    if((cosinus&lt;=0.924)&amp;&amp;(cosinus&gt;0.383)&amp;&amp;(dy&gt;0)){oldlad=d_DownRight;};
-    if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&lt;0)){oldlad=d_Up;};
-    if((cosinus&lt;=0.383)&amp;&amp;(cosinus&gt;-0.383)&amp;&amp;(dy&gt;0)){oldlad=d_Down;};
-    if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&lt;0)){oldlad=d_UpLeft;};
-    if((cosinus&lt;=-0.383)&amp;&amp;(cosinus&gt;-0.924)&amp;&amp;(dy&gt;0)){oldlad=d_DownLeft;};
-    if(cosinus&lt;=-0.924){oldlad=d_Left;};
-    switch oldlad
-            {
-                case d_Up:
-                     {
-                      sprite_index=javasup;break;
-                     }
-                case d_Down:
-                     {
-                      sprite_index=javasdown;break;     
-                     }
-                case d_Left:
-                     {
-                      sprite_index=javasleft;break;        
-                     }
-                case d_Right:
-                     {
-                      sprite_index=javasright;break;        
-                     }
-                case d_UpLeft:
-                     {
-                      sprite_index=javasleftup;break;
-                     }
-                case d_UpRight:
-                     {
-                      sprite_index=javasrightup;break;
-                     }
-                case d_DownRight:
-                     {
-                      sprite_index=javarightdown;break;
-                     }
-                case d_DownLeft:
-                     {
-                      sprite_index=javasleftdown;break;
-                     }
+                {
+                    case d_Up:
+                         {
+                          sprite_index=javasup;break;
+                         }
+                    case d_Down:
+                         {
+                          sprite_index=javasdown;break;     
+                         }
+                    case d_Left:
+                         {
+                          sprite_index=javasleft;break;        
+                         }
+                    case d_Right:
+                         {
+                          sprite_index=javasright;break;        
+                         }
+                    case d_UpLeft:
+                         {
+                          sprite_index=javasleftup;break;
+                         }
+                    case d_UpRight:
+                         {
+                          sprite_index=javasrightup;break;
+                         }
+                    case d_DownRight:
+                         {
+                          sprite_index=javarightdown;break;
+                         }
+                    case d_DownLeft:
+                         {
+                          sprite_index=javasleftdown;break;
+                         }
+                }
             }
         }
     }
-}
-
-x1=(bbox_right+bbox_left)/2;
-y1=(bbox_top+bbox_bottom)/2;
-if (place_free(x1+dx,y1+dy)){
-    x+=dx;y+=dy;
-} else {
-    if (place_free(x1+dx,y1)&amp;&amp;!place_free(x1,y1+dy)){
-        x+=dx;
+    
+    x1=(bbox_right+bbox_left)/2;
+    y1=(bbox_top+bbox_bottom)/2;
+    if (place_free(x1+dx,y1+dy)){
+        x+=dx;y+=dy;
     } else {
-        if (!place_free(x1+dx,y1)&amp;&amp;place_free(x1,y1+dy)){
-        y+=dy;
+        if (place_free(x1+dx,y1)&amp;&amp;!place_free(x1,y1+dy)){
+            x+=dx;
+        } else {
+            if (!place_free(x1+dx,y1)&amp;&amp;place_free(x1,y1+dy)){
+            y+=dy;
+        }
+        }
     }
+    depth=-bbox_bottom;
+} else {
+    if(!deadbodyset){
+        var try = irandom(3);
+        switch try
+        {
+            case 0: {sprite_index = javadead0; break;}
+            case 1: {sprite_index = javadead1; break;}
+            case 2: {sprite_index = javadead2; break;}
+            case 3: {sprite_index = javadead3; break;}
+        }
+        deadbodyset=true;
+        solid=false;
+        depth=999;
     }
 }
-depth=-bbox_bottom;
+
+
 </string>
           </argument>
         </arguments>

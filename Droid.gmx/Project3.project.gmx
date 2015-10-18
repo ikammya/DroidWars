@@ -86,6 +86,10 @@
     </sprites>
     <sprite>sprites\sprite49</sprite>
     <sprites name="Java">
+      <sprite>sprites\javadead3</sprite>
+      <sprite>sprites\javadead2</sprite>
+      <sprite>sprites\javadead1</sprite>
+      <sprite>sprites\javadead0</sprite>
       <sprite>sprites\javasup</sprite>
       <sprite>sprites\javasdown</sprite>
       <sprite>sprites\javasleft</sprite>
@@ -164,22 +168,36 @@
       <sprite>sprites\terminalgreen</sprite>
     </sprites>
     <sprites name="r2d2">
-      <sprite>sprites\r2ups</sprite>
-      <sprite>sprites\r2downs</sprite>
-      <sprite>sprites\r2rights</sprite>
-      <sprite>sprites\r2lefts</sprite>
-      <sprite>sprites\r2rightups</sprite>
-      <sprite>sprites\r2leftups</sprite>
-      <sprite>sprites\r2rightdowns</sprite>
-      <sprite>sprites\r2leftdowns</sprite>
-      <sprite>sprites\r2up</sprite>
-      <sprite>sprites\r2down</sprite>
-      <sprite>sprites\r2left</sprite>
-      <sprite>sprites\r2right</sprite>
-      <sprite>sprites\r2rightup</sprite>
-      <sprite>sprites\r2leftup</sprite>
-      <sprite>sprites\r2rightdown</sprite>
-      <sprite>sprites\r2leftdown</sprite>
+      <sprites name="r2 moving">
+        <sprite>sprites\r2down</sprite>
+        <sprite>sprites\r2left</sprite>
+        <sprite>sprites\r2rightup</sprite>
+        <sprite>sprites\r2right</sprite>
+        <sprite>sprites\r2leftdown</sprite>
+        <sprite>sprites\r2rightdown</sprite>
+        <sprite>sprites\r2up</sprite>
+        <sprite>sprites\r2leftup</sprite>
+      </sprites>
+      <sprites name="r2 standing">
+        <sprite>sprites\r2downs</sprite>
+        <sprite>sprites\r2rightups</sprite>
+        <sprite>sprites\r2rightdowns</sprite>
+        <sprite>sprites\r2lefts</sprite>
+        <sprite>sprites\r2leftdowns</sprite>
+        <sprite>sprites\r2leftups</sprite>
+        <sprite>sprites\r2ups</sprite>
+        <sprite>sprites\r2rights</sprite>
+      </sprites>
+      <sprites name="r2 shocker">
+        <sprite>sprites\r2upw</sprite>
+        <sprite>sprites\r2rightw</sprite>
+        <sprite>sprites\r2leftupw</sprite>
+        <sprite>sprites\r2rightdownw</sprite>
+        <sprite>sprites\r2leftw</sprite>
+        <sprite>sprites\r2leftdownw</sprite>
+        <sprite>sprites\r2downw</sprite>
+        <sprite>sprites\r2rightupw</sprite>
+      </sprites>
     </sprites>
     <sprites name="flash">
       <sprite>sprites\flash</sprite>
@@ -267,6 +285,8 @@
     <object>objects\hp3po</object>
     <object>objects\hpr2</object>
     <object>objects\savebutton</object>
+    <object>objects\r2d2flbutton</object>
+    <object>objects\singlebutton</object>
     <object>objects\openbutton</object>
     <object>objects\openbutton_r</object>
     <object>objects\openbutton_g</object>
@@ -298,7 +318,9 @@
       <object>objects\astro5</object>
     </objects>
     <object>objects\menubackchanger</object>
+    <object>objects\r2shocker</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\menureal</room>
     <room>rooms\SampleRoom2</room>

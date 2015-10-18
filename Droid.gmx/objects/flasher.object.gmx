@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = 999;
+            <string>depth = 998;
 justhitelectric=false;
 </string>
           </argument>
@@ -82,7 +82,7 @@ justhitelectric=false;
         if (j!=noone){
             if (position_meeting(j.x,j.y,self)){
                 with(j) {
-                    instance_destroy();
+                    alive=false;
                 } 
                 alarm[0]=1.5*room_speed;
                 justhitelectric=true;
