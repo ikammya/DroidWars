@@ -255,6 +255,7 @@
   <scripts name="scripts">
     <script>scripts\GetDirection.gml</script>
     <script>scripts\trace.gml</script>
+    <script>scripts\AdaptiveButtons.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\wall1</object>

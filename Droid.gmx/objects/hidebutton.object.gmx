@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var act;
+            <string>self1 = object_get_name(object_index);
+var act;
 var r2h = false;
 var ph = false;
 </string>
@@ -204,7 +205,7 @@ sprite_index=hidebut;
           </argument>
           <argument>
             <kind>0</kind>
-            <string>view_yview[0]+view_hview[0]-242</string>
+            <string>view_yview[0]+view_hview[0]-AdaptiveButtons(self1)</string>
           </argument>
         </arguments>
       </action>
