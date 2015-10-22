@@ -51,12 +51,23 @@
             <string>if object_exists(terminal_g)
    {
         plx = player.x;
-        ply = player.y;
-        tx=terminal_g.x;
-        ty=terminal_g.y;
+   ply = player.y;
+
+    rx = player.x;
+    ry = player.y;
+
+    if (instance_exists(r2d2)){
+        rx = r2d2.x;
+        ry = r2d2.y;
+    }
+
+    tx=terminal_g.x;
+    ty=terminal_g.y;
+    dist = min(sqrt((plx-tx)*(plx-tx)+(ply-ty)*(ply-ty)),sqrt((rx-tx)*(rx-tx)+(ry-ty)*(ry-ty)));
+
         radius = 300;
         
-        dist = sqrt((plx-tx)*(plx-tx)+(ply-ty)*(ply-ty));
+
         if(dist&gt;radius){instance_destroy();}
    }
 

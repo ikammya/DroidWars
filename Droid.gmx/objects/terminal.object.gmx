@@ -64,9 +64,9 @@ if (instance_exists(r2d2)){
 
 dist = min(sqrt((plx-x)*(plx-x)+(ply-y)*(ply-y)),sqrt((rx-x)*(rx-x)+(ry-y)*(ry-y)));
 
-if ((dist&lt;radius)&amp;&amp;(!instance_exists(savebutton))){
-    instance_create(-1000, -1000, savebutton);
-    instance_create(-1000, -1000, openbutton);
+if (dist&lt;radius){
+    if(!instance_exists(savebutton)){instance_create(-1000, -1000, savebutton);}
+    if(!instance_exists(openbutton)){instance_create(-1000, -1000, openbutton);}
 }
 </string>
           </argument>

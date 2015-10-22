@@ -19,5 +19,5 @@ while ((i<array_length_1d(order))&&(order[i]!=a)){
     //trace(a, i, order[i], object, k, res);
     i++;
 }
-trace(a,res);
+//trace(a,res);
 return res;
